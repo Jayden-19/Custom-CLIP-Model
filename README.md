@@ -2,6 +2,13 @@
 
 A complete, from-scratch PyTorch implementation of OpenAI's **CLIP (Contrastive Language-Image Pretraining)** model. This project features a custom Vision Transformer (ViT) for image encoding, a Transformer-based text encoder, and a highly efficient streaming data pipeline designed to handle large-scale multimodal datasets without memory bottlenecks.
 
+## 📥 Download Pre-Trained Weights
+
+The trained model weights (~800 MB) are available for download. You can grab them via Hugging Face or directly from the GitHub Releases page:
+
+* **[🤗 Hugging Face Model Hub](https://huggingface.co/jden19/custom-clip-cc3m/tree/main)** *(Recommended)*
+* **[📦 GitHub Releases (v1.0.0)](https://github.com/Jayden-19/Custom-CLIP-Model/releases/tag/v1.0.0)**
+
 ## 🚀 Project Overview
 
 This model maps images and text into a shared 512-dimensional latent space using a symmetric contrastive loss function. It is built entirely from the ground up to demonstrate a deep understanding of Vision-Language Model (VLM) architectures.
@@ -67,7 +74,7 @@ The codebase is highly modular for readability and easy debugging:
 The complete zero-shot inference pipeline is provided in **`inference.ipynb`**. 
 
 This notebook demonstrates how to:
-1. Load the trained model weights.
+1. Load the trained model weights (after downloading them from Hugging Face or Releases).
 2. Tokenize text captions using the Hugging Face tokenizer.
 3. Preprocess and transform input images.
 4. Extract features from both encoders and calculate the cosine similarity matrix for zero-shot image-text matching.
